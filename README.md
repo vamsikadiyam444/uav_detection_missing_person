@@ -7,7 +7,7 @@ This Project provides a concise, practical test procedure for the UAV-based miss
 steps, logging, GPS,  and AWS SNS notifications.
 ________________________________________
 # Objectives
-2. 
+
 •	Validate end-to-end detection, identification, geolocation, and notification.
 
 •	Verify system performance in: Daylight, Low-Light (IR/Thermal), and Windy (dual-sensor fusion).
@@ -15,7 +15,7 @@ ________________________________________
 •	Confirm Google Maps links and AWS SNS notifications are produced for valid detections.
 ________________________________________
 # Test Setup
-3. 
+
 Folders & Files - images/ — input images - missing_persons/ — reference images - output/ — annotated images - gps_log.csv — optional: filename,lat,lon,alt
 
 Software/Environment - Python 3.12 (venv) - Packages: you can refer from requirements.txt
@@ -32,16 +32,16 @@ pip install -r requirements.txt
 
 # AWS SNS Test Steps
 1.	Create SNS topic and subscribe an email/SMS.
-2.	
-3.	Add AWS credentials to environment (or configure profile).
-4.	
-5.	Run detection; script publishes when match == True:
-6.	
-o	Subject: Missing person detected: <NAME>
+   
+2.	Add AWS credentials to environment (or configure profile).
 
-o	Message: includes name, confidence, Google Maps link, image path, timestamp
+3.	Run detection; script publishes when match == True:
 
-7.	Verify receipt and content formatting.
+4.Subject: Missing person detected: <NAME>
+
+5.	Message: includes name, confidence, Google Maps link, image path, timestamp
+
+6.	Verify receipt and content formatting.
 ________________________________________
 
 # Set up AWS credentials for SNS:
