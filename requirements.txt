@@ -1,0 +1,7 @@
+deepface==0.0.88
+opencv-python
+Pillow
+tensorflow
+keras
+boto3
+numpy
