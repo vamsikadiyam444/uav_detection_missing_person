@@ -54,3 +54,53 @@ export AWS_DEFAULT_REGION='YOUR_REGION'
 
 ```
 
+# Scenario A: Daylight Search (RGB)
+1.	Capture geotagged RGB sweeps.
+
+2.	Place subjects at known coordinates.
+
+3.	Transfer images to images/.
+
+4.	Run:
+ 
+   python2.py --mode daylight
+
+5.	Verify annotated images in output/ and printed Google Maps links.
+
+6.	Confirm SNS notification receipt.
+
+Record: detections, matches, GPS, processing time.
+
+# Scenario B: Low-Light Search (IR/Thermal fallback)
+
+1.	Capture synchronized RGB (low-light) + IR frames.
+
+2.	Transfer images to images/ (IR frames in ir_images/ if used).
+
+3.	Run:
+
+python2.py --mode lowlight
+
+5.	Verify detections in output/; check IR fallback activation logs.
+
+6.	Confirm SNS messages for matches.
+
+Record: IR vs RGB detection comparison, false alarms.
+
+# Scenario C: Windy Deployment (Dual-sensor fusion)
+
+1.	Capture jittery frames with UAV/gimbal under gusts.
+
+2.	Transfer to images/.
+
+3.	Run:
+
+python2.py --mode dualsensor
+
+5.	Verify frame-stability filtering and fusion use; check annotated images.
+
+6.	Confirm SNS message delivery and log processing times.
+
+Record: skipped frames %, detection latency.
+
+
