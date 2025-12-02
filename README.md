@@ -4,7 +4,7 @@
 
 This Project provides a concise, practical test procedure for the UAV-based missing-person detection system. It covers three scenarios (Daylight, Low-Light, Windy), required equipment, acceptance criteria, test 
 
-steps, logging, GPS,  and AWS SNS notifications.
+steps, logging, GPS,  and AWS SES notifications.
 ________________________________________
 # Objectives
 
@@ -12,7 +12,7 @@ ________________________________________
 
 •	Verify system performance in: Daylight, Low-Light (IR/Thermal), and Windy (dual-sensor fusion).
 
-•	Confirm Google Maps links and AWS SNS notifications are produced for valid detections.
+•	Confirm Google Maps links and AWS SES notifications are produced for valid detections.
 ________________________________________
 # Test Setup
 
