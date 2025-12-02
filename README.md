@@ -30,21 +30,50 @@ pip install -r requirements.txt
 
 ```
 
-# AWS SNS Test Steps
-1.	Create SNS topic and subscribe an email/SMS.
-   
-2.	Add AWS credentials to environment (or configure profile).
+# AWS SES Test Steps
+Steps to Set Up SES  Emails from the sender and the recipient
 
-3.	Run detection; script publishes when match == True:
+ # Step 1: Log in to AWS SES
 
-4.Subject: Missing person detected: <NAME>
+ Navigate to the AWS Management Console.
 
-5.	Message: includes name, confidence, Google Maps link, image path, timestamp
+ Search for SES (Simple Email Service) and open it.
 
-6.	Verify receipt and content formatting.
+ SES resources are area-specific, therefore make sure you choose the right region (us-east-1, for example).
+
+ # Step 2: Verify Sender Email
+
+ The sender email is the one that will appear in the "From" field of your email.
+
+ In the SES console, navigate to Verified identities → Create identity.
+
+ Select Email address and click Next.
+
+ Enter the email address you wish to send from, such as vamsikadiyam444@gmail.com.
+
+ Click Create identity.
+
+ Check the inbox of the sender email and click the verification link issued by AWS.
+
+ Once validated, the sender email will get a next to it in SES.
+
+ # Step 3: Use Sandbox Mode to Confirm Receiver Email
+
+ When SES is in sandbox mode, you can only send emails to validated addresses.
+
+ Verified identities → Create identity in the SES console.
+
+ Select Email address and click Next.
+
+ Create an identity and enter the recipient's email address, such as m.komal12345@gmail.com.
+
+ Check the recipient email inbox and click the verification link.
+
+ The recipient email is then prepared to accept emails from SES in sandbox mode.
+
 ________________________________________
 
-# Set up AWS credentials for SNS:
+# Set up AWS credentials for SES:
 
 ```bash
 
