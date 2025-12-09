@@ -132,4 +132,14 @@ python2.py --mode dualsensor
 
 Record: skipped frames %, detection latency.
 
+# Run Instructions
+
+just run 
+
+``base
+
+python python2.py
+
+```
+
 
