@@ -134,9 +134,7 @@ Record: skipped frames %, detection latency.
 
 # Run Instructions
 
-just run 
-
-``bash
+```bash
 
 python python2.py
 
