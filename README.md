@@ -96,7 +96,7 @@ export AWS_DEFAULT_REGION='YOUR_REGION'
 
 5.	Verify annotated images in output/ and printed Google Maps links.
 
-6.	Confirm SNS notification receipt.
+6.	Confirm SES notification receipt.
 
 Record: detections, matches, GPS, processing time.
 
@@ -112,7 +112,7 @@ python2.py --mode lowlight
 
 5.	Verify detections in output/; check IR fallback activation logs.
 
-6.	Confirm SNS messages for matches.
+6.	Confirm SES messages for matches.
 
 Record: IR vs RGB detection comparison, false alarms.
 
@@ -128,7 +128,7 @@ python2.py --mode dualsensor
 
 5.	Verify frame-stability filtering and fusion use; check annotated images.
 
-6.	Confirm SNS message delivery and log processing times.
+6.	Confirm SES message delivery and log processing times.
 
 Record: skipped frames %, detection latency.
 
